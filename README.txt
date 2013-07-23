@@ -34,7 +34,7 @@ Find networkaddress  ifconfig -a
 __________________________________________________
 Help
 
-If the Access Point does not show up in the WiFi list, than check the network setup.
+If the Access Point does not show up in the WiFi list, than check the network setup of the Pi.
 Sometimes the wlan0 static ip address is not setup by the Chef script.
 
 Check:  sudo ifconfig

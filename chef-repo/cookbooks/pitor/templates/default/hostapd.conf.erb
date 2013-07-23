@@ -1,0 +1,61 @@
+# Only for bridges, place a # before the next line for AP mode!
+#bridge=br0
+
+# Interface and Driver
+interface=<%= @wlan_if %>
+driver=<%= @wlan_driver %>
+
+# WLAN-Settings
+ssid=<%= @wlan_ssid %>
+channel=6
+
+# Transfer Mode
+hw_mode=g
+
+# Beacons
+beacon_int=100
+dtim_period=2
+
+# Don't use MAC auth
+macaddr_acl=0
+
+# ESSID visible
+ignore_broadcast_ssid=0
+
+# Country-specific settings
+country_code=<%= @country %>
+#ieee80211d=1
+
+# Authentification
+auth_algs=1
+
+# Encryption: WPA2 !!Don't use WEP!
+wpa=2
+wpa_passphrase=<%= @wlan_wpa_passphrase %>
+wpa_key_mgmt=WPA-PSK
+wpa_pairwise=TKIP
+
+# Max Clients
+max_num_sta=20
+
+# Limit size of Datapackets
+rts_threshold=2347
+fragm_threshold=2346
+
+# hostapd Log settings
+logger_syslog=-1
+logger_syslog_level=2
+logger_stdout=-1
+logger_stdout_level=2
+
+# Key scheduling
+wpa_group_rekey=600
+wpa_ptk_rekey=600
+wpa_gmk_rekey=86400
+
+## not used
+#auth_algs=3
+#macaddr_acl=0
+#wmm_enabled=1
+#eap_reauth_period=360000000
+

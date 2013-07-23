@@ -1,0 +1,5 @@
+{
+"run_list":[
+"recipe[pitor::pitor_test]"
+]
+}

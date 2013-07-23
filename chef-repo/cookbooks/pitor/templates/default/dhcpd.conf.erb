@@ -1,0 +1,36 @@
+#
+# Configuration file for ISC dhcpd for Debian - Wheezy
+#
+#
+
+# The ddns-updates-style parameter controls whether or not the server will
+# attempt to do a DNS update when a lease is confirmed. We default to the
+# behavior of the version 2 packages ('none', since DHCP v2 didn't
+# have support for DDNS.)
+ddns-update-style none;
+
+# option definitions common to all supported networks...
+# option domain-name <%= @domain_name %>;
+# option domain-name-servers <%= @domain_name_servers %>;
+
+default-lease-time 600;
+max-lease-time 7200;
+
+# If this DHCP server is the official DHCP server for the local
+# network, the authoritative directive should be uncommented.
+authoritative;
+
+# Use this to send dhcp log messages to a different log file (you also
+# have to hack syslog.conf to complete the redirection).
+log-facility local7;
+
+## configuration for PiTOR access
+subnet <%= @dhcpd_subnet %> netmask <%= @dhcpd_netmask %> {
+  range <%= @dhcpd_range %>;
+  option routers <%= @dhcpd_routers %>;
+  option broadcast-address <%= @dhcpd_broadcast_address %>;
+  default-lease-time <%= @dhcpd_default_lease_time %>;
+  max-lease-time <%= @dhcpd_max_lease_time %>;
+  option domain-name-servers <%= @dhcpd_domain_name_servers %>;
+  option domain-name <%= @dhcpd_domain_name %>;
+}

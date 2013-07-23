@@ -24,7 +24,7 @@ To run the installation file:
 - cd /home/pi/setup_pitor/
 - sudo ./_start_here_install_chef_wheezy_pitor.sh
 
-Re-Boot: sudo shutdown -r now
+Restart: sudo shutdown -r now
 
 
 >>> Only plug-in a USB WiFi/WLAN adapter when the power is off.

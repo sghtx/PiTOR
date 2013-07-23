@@ -7,7 +7,7 @@ setup_pitor.tar.gz contains all the files in the directory setup_pitor
 
 Read the more extensive documentation: PiTOR_info.pdf
 
-Send setup_pitor.tar.gz from windows workstation to Raspberry Pi target:
+Send setup_pitor.tar.gz from a windows workstation to Raspberry Pi target:
 - Start psftp (PuTTY FTP) on the mswindows workstation
 - Open psftp connection:   open ip_nr
 - Send file with psftp:	 put x:\dir\setup_pitor.tar.gz

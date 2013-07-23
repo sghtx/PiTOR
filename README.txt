@@ -27,7 +27,7 @@ To run the installation file:
 Re-Boot: sudo shutdown -r now
 
 
->>> Only plug-in a WLAN adapter when the power is off.
+>>> Only plug-in a USB WiFi/WLAN adapter when the power is off.
 
 Find networkaddress  ifconfig -a
 

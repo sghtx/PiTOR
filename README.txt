@@ -1,6 +1,6 @@
-Install Chef and a TOR WiFi router with Chef
+Install Opscode Chef-Solo and a TOR WiFi router with a Chef recipe on Raspberry Pi.
 
->>> This will only run if the Raspberry Pi ethernet port is connected to the the Internet !
+>>> This will only run if the Raspberry Pi ethernet port is connected to the Internet !
 
 
 setup_pitor.tar.gz contains all the files in the directory setup_pitor
@@ -8,22 +8,22 @@ setup_pitor.tar.gz contains all the files in the directory setup_pitor
 Read the more extensive documentation: pitor_doc.pdf
 
 Send setup_pitor.tar.gz from windows workstation to Raspberry Pi target:
-•	Start psftp (PuTTY FTP) on the mswindows workstation
-•	Open psftp connection:   open ip_nr
-•	Send file with psftp:	 put x:\dir\setup_pitor.tar.gz
+ï¿½	Start psftp (PuTTY FTP) on the mswindows workstation
+ï¿½	Open psftp connection:   open ip_nr
+ï¿½	Send file with psftp:	 put x:\dir\setup_pitor.tar.gz
  
 Unzip the configuration file:
-•	cd /home/pi/
-•	sudo tar –xzvf setup_pitor.tar.gz
-•	EDIT Chef Attributes Files:
+ï¿½	cd /home/pi/
+ï¿½	sudo tar ï¿½xzvf setup_pitor.tar.gz
+ï¿½	EDIT Chef Attributes Files:
 	-	/home/pi/setup_pitor/chef-repo/cookbooks/pitor/attributes/default.rb
 	-	At least configure the Access point password
 	
 To run the installation file:
-•	cd /home/pi/setup_pitor/
-•	sudo ./_start_here_install_chef_wheezy_pitor.sh
+ï¿½	cd /home/pi/setup_pitor/
+ï¿½	sudo ./_start_here_install_chef_wheezy_pitor.sh
 
-•	Re-Boot: sudo shutdown –r now
+ï¿½	Re-Boot: sudo shutdown ï¿½r now
 
 
 Preparations on the Raspberry Pi:

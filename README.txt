@@ -5,7 +5,7 @@ Install Opscode Chef-Solo and a TOR WiFi router with a Chef recipe on Raspberry 
 
 setup_pitor.tar.gz contains all the files in the directory setup_pitor
 
-Read the more extensive documentation: pitor_doc.pdf
+Read the more extensive documentation: pitor_info.pdf
 
 Send setup_pitor.tar.gz from windows workstation to Raspberry Pi target:
 �	Start psftp (PuTTY FTP) on the mswindows workstation

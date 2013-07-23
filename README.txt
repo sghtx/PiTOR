@@ -17,7 +17,7 @@ Unzip the configuration file:
 - sudo tar xzvf setup_pitor.tar.gz
 
 EDIT Chef Attributes Files:
-- /home/pi/setup_pitor/chef-repo/cookbooks/pitor/attributes/default.rb
+- sudo nano /home/pi/setup_pitor/chef-repo/cookbooks/pitor/attributes/default.rb
 - At least configure the Access point password
 	
 To run the installation file:

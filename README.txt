@@ -35,10 +35,9 @@ __________________________________________________
 Help
 
 If the Access Point does not show up in the WiFi list, than check the network setup of the Pi.
-Sometimes the wlan0 static ip address is not setup by the Chef script.
 
 Check:  sudo ifconfig
-Result: wlan0 must have an ip address
+Result: wlan0 must have an ip address, default is 192.168.42.1
 
 To set the network address of wlan0 on the Raspberry Pi commandline:
 sudo ifconfig wlan0 192.168.42.1

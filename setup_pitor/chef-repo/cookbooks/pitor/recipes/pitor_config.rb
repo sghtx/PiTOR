@@ -20,11 +20,9 @@
 
 ########################################################
 ## set static address on wlan adapter
-execute "ifconfig wlan0" do
-  command "sudo ifconfig #{node[:pitor][:wlan][:if]} #{node[:pitor][:wlan_address]}"
-  action :run
+ifconfig "#{node[:pitor][:wlan_address]}" do
+  device #{node[:pitor][:wlan][:if]}
 end
-
 
 ########################################################
 ## create configuration files
@@ -140,14 +138,6 @@ execute "configure daemons" do
   command "sudo update-rc.d hostapd enable"
   command "sudo update-rc.d isc-dhcp-server enable"
   command "sudo update-rc.d tor enable"
-  action :run
-end
-
-#######################################################
-## set static address on wlan adapter
-## this sometimes will not stick, so set it again as last action
-execute "ifconfig wlan0" do
-  command "sudo ifconfig #{node[:pitor][:wlan][:if]} #{node[:pitor][:wlan_address]}"
   action :run
 end
 

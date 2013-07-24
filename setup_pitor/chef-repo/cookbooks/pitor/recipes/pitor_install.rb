@@ -125,22 +125,25 @@ end
 #######################################################
 ## USB WiFi dongle hostapd setup for Realtek 8188 & 8192 Chipsets
 ## replace hostapd with pre-compiled version
-execute "remove distribution hostapd if backup exists" do
-  command "sudo rm /usr/sbin/hostapd"
-  only_if { ::File.exists?("/usr/sbin/hostapd.orig")}
-  action :run
-end
+case #{node[:pitor][:wlan][:hostapd_version]}
+	when "hostapd_rtl819x"
+		execute "remove distribution hostapd if backup exists" do
+		  command "sudo rm /usr/sbin/hostapd"
+		  only_if { ::File.exists?("/usr/sbin/hostapd.orig")}
+		  action :run
+		end
 
-execute "backup distribution hostapd" do
-  command "sudo mv /usr/sbin/hostapd /usr/sbin/hostapd.orig"
-  not_if { ::File.exists?("/usr/sbin/hostapd.orig")}
-  action :run
-end
+		execute "backup distribution hostapd" do
+		  command "sudo mv /usr/sbin/hostapd /usr/sbin/hostapd.orig"
+		  not_if { ::File.exists?("/usr/sbin/hostapd.orig")}
+		  action :run
+		end
 
-execute "replace distribution hostapd with pre-compiled compatible version" do
-  command "sudo cp /home/pi/setup_pitor/support/hostapd_RTL8188C_8192C /usr/sbin/hostapd"
-  action :run
-end
+		execute "replace distribution hostapd with pre-compiled compatible version" do
+		  command "sudo cp /home/pi/setup_pitor/support/hostapd_RTL8188C_8192C /usr/sbin/hostapd"
+		  action :run
+		end
+	end
 
 #######################################################
 ## remove WPA-Suppplicant if needed

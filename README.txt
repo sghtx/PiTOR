@@ -37,8 +37,8 @@ This is tested with a TP-Link adapter with a Realtek Semiconductor Corp. RTL8188
 
 __________________________________________________
 TODO
-Create a list of USB WiFi sticks that function and the needed software (drivers, hostapd, etc.).
-Please tell your results.
+Create a list of USB WiFi sticks that function and add the the installation of the needed software (drivers, hostapd, etc.) and the configuration to the chef recipe.
+Please tell your results with USB sticks.
 
 __________________________________________________
 Help

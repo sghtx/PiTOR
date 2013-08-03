@@ -32,6 +32,15 @@ Restart: sudo shutdown -r now
 Find networkaddress  ifconfig -a
 
 __________________________________________________
+Compatible USB WiFi sticks
+This is tested with a TP-Link adapter with a Realtek Semiconductor Corp. RTL8188CUS chipset
+
+__________________________________________________
+TODO
+Create a list of USB WiFi sticks that function and the needed software (drivers, hostapd, etc.).
+Please tell your results.
+
+__________________________________________________
 Help
 
 If the Access Point does not show up in the WiFi list, than check the network setup of the Pi.
